@@ -1,8 +1,8 @@
 steps:
   - name: "eu.gcr.io/cloud-builders/go"
-    args: ["install", "github.com/{GITHUB_HANDLE}/spinnaker"]
-    env: ["PROJECT_ROOT=github.com/{GITHUB_HANDLE}/spinnaker"]
+    args: ["install", "github.com/tordnesse/spinnaker"]
+    env: ["PROJECT_ROOT=github.com/tordnesse/spinnaker"]
   - name: "eu.gcr.io/cloud-builders/docker"
-    args: ["build", "-t", "gcr.io/{GCP_PROJECT_ID}/spinnaker:$REVISION_ID", "-f", "Dockerfile", "."]
+    args: ["build", "-t", "gcr.io/tordnesse/spinnaker:$REVISION_ID", "-f", "Dockerfile", "."]
 images:
-  - "eu.gcr.io/{GCP_PROJECT_ID}/spinnaker:$REVISION_ID"
+  - "eu.gcr.io/tordplayground/spinnaker:$REVISION_ID"
