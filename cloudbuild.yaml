@@ -3,6 +3,6 @@ steps:
     args: ["install", "github.com/tordnesse/spinnaker"]
     env: ["PROJECT_ROOT=github.com/tordnesse/spinnaker"]
   - name: "gcr.io/cloud-builders/docker"
-    args: ["build", "-t", "eu.gcr.io/tordnesse/spinnaker:$REVISION_ID", "-f", "Dockerfile", "."]
+    args: ["build", "-t", "gcr.io/tordnesse/spinnaker:$REVISION_ID", "-f", "Dockerfile", "."]
 images:
-  - "eu.gcr.io/tordplayground/spinnaker:$REVISION_ID"
+  - "gcr.io/tordplayground/spinnaker:$REVISION_ID"
